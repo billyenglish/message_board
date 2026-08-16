@@ -1,7 +1,11 @@
+"use client";
+import Homepage from "./components/homepage";
+
 export default function Home() {
+
   return (
     <>
-      <h1>Hello World</h1>
+      <Homepage />
     </>
   )
 }
