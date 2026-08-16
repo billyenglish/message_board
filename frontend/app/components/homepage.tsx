@@ -1,0 +1,100 @@
+export default function Homepage() {
+
+    return (
+        <section
+            className="
+                border-2
+                min-h-screen
+                flex
+                flex-col
+                items-center
+                justify-center"
+        >
+            <div
+                className="
+                    flex
+                    flex-col
+                    items-center
+                    justify-center
+                    gap-4
+                "
+            >
+                <div>
+                    <h2
+                        className="
+                            text-5xl
+                            tracking-tighter
+                            "
+                        >
+                        The Board
+                    </h2>
+                </div>
+                <div
+                    className="
+                        flex
+                        flex-col
+                        items-center
+                        justify-center
+                        min-w-full
+                    "
+                >
+                    <h3
+                        className="
+                            text-center
+                            text-lg
+                            "
+                    >
+                        Connect. Discuss. Share.
+                    </h3>
+                </div>
+                <div
+                    className="
+                        flex
+                        flex-col
+                        gap-2
+                    "
+                >
+                    <h4
+                        className="
+                            text-2xl
+                            tracking-tighter
+                        "
+                    >
+                        Welcome to The Board
+                    </h4>
+                    <p
+                        className="
+                            text-lg
+                            tracking-tighter
+                        "
+                    >
+                        A place to ask questions share ideas, and join conversations.
+                    </p>
+                </div>
+                <div
+                    className="
+                        flex
+                        gap-4
+                    "
+                >
+                    <button
+                        className="
+                            flex
+                            items-center
+                            h-8
+                            p-1
+                            hover:underline
+                            hover:underline-offset-4
+                            cursor-pointer
+                            text-lg
+                            font-normal
+                            tracking-wide
+                        "
+                    >
+                        Get Started
+                    </button>
+                </div>
+            </div>
+        </section>
+    );
+};
