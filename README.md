@@ -46,5 +46,5 @@ A full-stack message board application where users can ask questions, share idea
 Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone git@github.com:billyenglish/message_board.git
 cd message-board
