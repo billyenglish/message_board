@@ -1,15 +1,28 @@
+"use client";
+import Nav from "./navigation";
+import Footer from "./footer";
+import { useContext } from "react";
+import ThemeContext from "../currenttheme/themecontext";
+
 export default function Homepage() {
+
+    const { toggleTheme } = useContext(ThemeContext);
 
     return (
         <section
-            className="
-                border-2
+            className={`
                 min-h-screen
                 flex
                 flex-col
                 items-center
-                justify-center"
-        >
+                justify-center
+                ${
+                    toggleTheme
+                    ? "bg-[var(--dark-background)] text-[var(--dark-primary-text)]"
+                    : "bg-[var(--light-background)] text-[var(--light-primary-text)]"
+                }
+        `}>
+            <Nav />
             <div
                 className="
                     flex
@@ -21,14 +34,16 @@ export default function Homepage() {
             >
                 <div>
                     <h2
-                        className="
+                        className={`
                             text-5xl
                             tracking-tighter
+                            
                             "
-                        >
+                        `}>
                         The Board
                     </h2>
                 </div>
+                <p>{toggleTheme}</p>
                 <div
                     className="
                         flex
@@ -39,11 +54,13 @@ export default function Homepage() {
                     "
                 >
                     <h3
-                        className="
+                        className={`
                             text-center
                             text-lg
-                            "
-                    >
+                            ${ toggleTheme
+                                ? "text-[var(--dark-secondary-text)]"
+                                : "text-[var(--light-secondary-text)]" }
+                    `}>
                         Connect. Discuss. Share.
                     </h3>
                 </div>
@@ -55,11 +72,13 @@ export default function Homepage() {
                     "
                 >
                     <h4
-                        className="
+                        className={`
                             text-2xl
                             tracking-tighter
-                        "
-                    >
+                            ${toggleTheme
+                                ? "text-[var(--dark-accent)]"
+                                : "text-[var(--light-accent)]" }
+                    `}>
                         Welcome to The Board
                     </h4>
                     <p
@@ -78,23 +97,27 @@ export default function Homepage() {
                     "
                 >
                     <button
-                        className="
+                        className={`
                             flex
                             items-center
                             h-8
                             p-1
                             hover:underline
                             hover:underline-offset-4
+                            ${toggleTheme
+                                ? "hover:text-[var(--dark-accent)]"
+                                : "hover:text-[var(--light-accent)]"
+                            }
                             cursor-pointer
                             text-lg
                             font-normal
                             tracking-wide
-                        "
-                    >
+                    `}>
                         Get Started
                     </button>
                 </div>
             </div>
+            <Footer />
         </section>
     );
 };
