@@ -1,5 +1,8 @@
+![alt text](frontend/app/images/the_board_image.jpeg)
+
 <img
-    src="../message_board/frontend/app/images/the_board_image.jpeg">
+    src="../message_board/frontend/app/images/the_board_image.jpeg"
+>
 
 # The Board
 
