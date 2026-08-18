@@ -6,9 +6,13 @@ import { useContext } from "react";
 import HeaderThird from "../subcomponents/privacyheader";
 import PrivacyParagraph from "../subcomponents/privacyparagraph";
 import CreateList from "../subcomponents/createlist";
-import Head from "next/head";
 
-const currentList1 = [
+type CreateListProps = {
+    title: string;
+    id: number;
+}
+
+const currentList1: CreateListProps[] = [
     { title: 'Username', id: 0 },
     { title: 'Email address', id: 1 },
     { title: 'Account credentials', id: 2 },
@@ -17,7 +21,7 @@ const currentList1 = [
     { title: 'Basic information required to maintain your session', id: 5 },
 ];
 
-const currentList2 = [
+const currentList2: CreateListProps[] = [
     { title: 'Create and manage your account', id: 0 },
     { title: 'Authenticate your identity', id: 1 },
     { title: 'Display your profile and user-generated content', id: 2 },
@@ -111,14 +115,7 @@ export default function Privacy() {
                             pl-10
                         "
                     >
-                        {
-                            currentList1.map((items) => (
-                                <CreateList
-                                    items={items.title}
-                                    key={items.id}
-                                />
-                            ))
-                        }
+                        
                     </div>
 
                     <HeaderThird
@@ -134,14 +131,7 @@ export default function Privacy() {
                     />
 
                     <div className="pl-10">
-                        {
-                            currentList2.map((items) => (
-                                <CreateList
-                                    items={items.title}
-                                    key={items.id}
-                                />
-                            ))
-                        }
+                        
                     </div>
 
                     <HeaderThird
