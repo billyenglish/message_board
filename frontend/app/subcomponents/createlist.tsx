@@ -3,6 +3,7 @@
 type CreateListProps ={
     items: string;
     id: number;
+    key: number | string;
 }
 
 export default function CreateList({
