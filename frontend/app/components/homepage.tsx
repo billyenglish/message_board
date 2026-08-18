@@ -37,7 +37,7 @@ export default function Homepage() {
                         className={`
                             text-5xl
                             tracking-tighter
-                            
+
                             "
                         `}>
                         The Board
