@@ -40,8 +40,6 @@ export default function About() {
                         text-4xl
                         text-white
                         tracking-tighter
-                        underline
-                        underline-offset-8
                         "
                 >
                     About the Board
