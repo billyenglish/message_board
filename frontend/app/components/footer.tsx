@@ -4,10 +4,10 @@ import Link from "next/link";
 export default function Footer() {
 
     const footerMenuList = [
-        { title: 'About', link: '', id: 0 },
-        { title: 'Privacy', link: '', id: 1 },
-        { title: 'Terms', link: '', id: 2 },
-        { title: 'Github', link: '', id: 3 }
+        { title: 'About', link: '/about', id: 0 },
+        { title: 'Privacy', link: '/privacy', id: 1 },
+        { title: 'Terms', link: '/terms', id: 2 },
+        { title: 'Github', link: 'https://github.com/billyenglish', id: 3 }
     ];
 
     return (
