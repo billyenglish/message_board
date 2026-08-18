@@ -115,7 +115,15 @@ export default function Privacy() {
                             pl-10
                         "
                     >
-                        
+                        {
+                            currentList1.map((items) => (
+                                <CreateList
+                                    items={items.title}
+                                    id={items.id}
+                                    key={items.id}
+                                />
+                            ))
+                        }
                     </div>
 
                     <HeaderThird
@@ -131,7 +139,15 @@ export default function Privacy() {
                     />
 
                     <div className="pl-10">
-                        
+                        {
+                            currentList2.map((items) => (
+                                <CreateList
+                                    items={items.title}
+                                    id={items.id}
+                                    key={items.id}
+                                />
+                            ))
+                        }
                     </div>
 
                     <HeaderThird
